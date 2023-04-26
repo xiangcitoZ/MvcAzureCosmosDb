@@ -49,9 +49,26 @@
                 @Html.DisplayFor(modelItem => item.VelocidadMaxima)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    <a class="btn btn-success"
+                   asp-area=""
+                   asp-controller="Coches"
+                   asp-action="Details"
+                    asp-route-id="@item.Id"
+                    >Detalles</a>
+
+                    <a class="btn btn-danger"
+                   asp-area=""
+                   asp-controller="Coches"
+                   asp-action="Delete"
+                   asp-route-id="@item.Id"
+                    >Delete</a>
+
+                    <a class="btn btn-warning"
+                   asp-area=""
+                   asp-controller="Coches"
+                   asp-action="Edit"
+                   asp-route-id="@item.Id"
+                    >EDITAR</a>
             </td>
         </tr>
 }
